@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <!--Import Google Icon Font-->
+      <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="resources/materialize/css/materialize.css"  media="screen,projection"/>
@@ -61,99 +61,190 @@
             </ul> 
             </div> 
 
-     <!--Header Content-->  
-     <div class="admin-content">
-      <div class="header-text bold white-text no-margin-bottom">Request For Overload</div>
-        <div class="schoolyear-term">
-        <h7>1st Semester AY 2019-2020</h7>
-        </div>
-        <table class="highlight table-style">
-          <thead class="thead-style">
-            <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Program</th>
-            <th>Yr. Level</th>
-            <th>Date Filled</th>
-            <th>Status</th>
-          </thread>
-          <tbody class=tbody-style>
-            <div class="container">
-              <tr>
-              <td><a class="yellow-gold modal-trigger" href="#StudentID">17-12345-678</a></td>
-              <div class="modal" id="StudentID">
-              <div class="modal-content">
-                
-                  <div class="modal-header"></div>
-                    <span class="closeBtn waves-effect waves-red waves-teal btn-flat">&times;</span>
+    <!--Header Content-->  
+        <div class="admin-content">
+          <div class="header-text bold white-text no-margin-bottom">Request for Overload</div>
+            <div class="schoolyear-term">
+            <h7>1st Semester AY 2019-2020</h7>
             </div>
+            <table class="highlight table-style">
+              <thead class="thead-style">
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Program</th>
+                <th>Yr. Level</th>
+                <th>Date Filled</th>
+                <th>Status</th>
+              </thread>
+              <tbody class=tbody-style>
+                <div class="container">
+                  <tr>
+              <!--Modal Trigger-->
+                  <td><a class="yellow-gold modal-trigger" href="#StudentID">17-12345-678</a></td>
+              <!--Modal Structure-->
+                  <div class="modal" id="StudentID">
+              <!--Modal Content-->
+                  <div class="modal-content">
+                    <div class="row no-margin">
+                      <div class="col s10 no-padding bold">ANTIDO, DANICA R.</div>
+                    </div>
+                    <div class="row no-margin">
+                      <div class="col s2 no-padding bold">Student ID:</div>
+                      <div class="col s10 no-padding">17-12345-678</div>
+                    </div>
+                    <div class="row no-margin">
+                      <div class="col s2 no-padding bold">Program:</div>
+                      <div class="col s10 no-padding">Bachelor of Science in Information Technology</div>
+                    </div>
+                    <div class="row no-margin">
+                      <div class="col s2 no-padding bold">Year Level:</div>
+                      <div class="col s10 no-padding">4th Year</div>
+                    </div>
+                  <!--AY/Term-->
+                    <div class="row no-margin-bottom">
+                      <div class="col 12">
+                        AY/Term:
+                        <div class="input-field inline bold">
+                          <input disabled value="1st Semester 2019-2020" id="disabled" type="text" class="validate">
+                        </div>
+                      </div>
+                    </div>
+                  <!--Allowable Units-->
+                    <div class="row no-margin-bottom">
+                      <div class="col s6">
+                        Allowable Units:
+                        <div class="input-field inline bold">
+                          <input disabled value="21" id="disabled" type="text" class="validate">
+                        </div>
+                      </div>
+                  <!--Total of Units to be Enrolled-->
+                      <div class="col s6">
+                        Total of Units to be Enrolled:
+                        <div class="input-field inline bold">
+                          <input disabled value="27" id="disabled" type="text" class="validate">
+                        </div>
+                      </div>
+                    </div>
+                  <!--Reason-->
+                    <div class="row no-margin-bottom">
+                      <div class="col s12">
+                        Reason:
+                        <div class="col s12 input-field inline bold">
+                          <input disabled value="Opening of Petitioned Course" id="disabled" type="text" class="validate">
+                        </div>
+                      </div>
+                    </div>
+                  <!--Remarks-->
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Remarks</label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                <!--Modal Database Table Content
+                <table class="highlight modal-table">
+                  <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Units</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <input type="checkbox" class="filled-in" id="checkbox1" />
+                      <label for="checkbox1"></label>
+                      <td>ENGL9</td>
+                      <td>3.0</td>
+                    </tr>
+                    <tr>
+                      <input type="checkbox" class="filled-in" id="checkbox1" />
+                      <label for="checkbox1"></label>
+                      <td>ENGL9</td>
+                      <td>3.0</td>
+                    </tr>
+                    <tr>
+                      <input type="checkbox" class="filled-in" id="checkbox1" />
+                      <label for="checkbox1"></label>
+                      <td>ENGL9</td>
+                      <td>3.0</td>
+                    </tr>
+                  </tbody>
+                  </table>--> 
+                    
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-close waves-effect btn-flat aims-btn">Approve</a>
+                      <a href="#!" class="modal-close waves-effect btn-flat aims-btn">Disapprove</a>
+                    </div>
+                  </div>
+                  </div>
+
+                  <td>Antido, Danica R.</td>
+                  <td>BSIT</td>
+                  <td>4th Year</td>
+                  <td>01/01/2020</td>
+                  <td>Pending</td>
+                </tr>
               </div>
-            </div>
-              <td>Antido, Danica R.</td>
-              <td>BSIT</td>
-              <td>4th Year</td>
-              <td>01/01/2020</td>
-              <td>Pending</td>
-            </tr>
-          </div>
-          </tbody>
-          </table>
-  <!--Search Button-->
-    <div class="search-containter">
-        <div class="topright">
-        <div class="row no-margin-bottom">
-          <form class="col s12">
+              </tbody>
+              </table>
+      <!--Search Button-->
+        <div class="search-containter">
+            <div class="topright">
             <div class="row no-margin-bottom">
-              <div class="input-field col s12">
-                <i class="material-icons prefix white-text">search</i>
-                <input id="icon_prefix" type="text" class="validate" autocomplete="off">
-                <label for="icon_prefix">Search</label>
-              </div>
+              <form class="col s12">
+                <div class="row no-margin-bottom">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix white-text">search</i>
+                    <input id="icon_prefix" type="text" class="validate" autocomplete="off">
+                    <label for="icon_prefix">Search</label>
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-        </div>
-      </div>
+            </div>
+          </div>
 
-  <!--<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
-          
+      <!--<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+              
+      <!--JQuery-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!--Materialize JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+      <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+      <!--<script type="text/javascript" src="resources/materialize/js/materialize.min.js"></script>-->
 
-  <!--JQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!--Materialize JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
-  <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-  <!--<script type="text/javascript" src="resources/materialize/js/materialize.min.js"></script>-->
-  <script>
-      $(document).ready(function(){
-        $('.collapsible').collapsible();
-      });
-  </script>
-  <script>
-      $(document).ready(function(){
-      $('.modal').modal();
-      });
-  </script>
-  <script>
-    // Get the modal
-    var modal = document.getElementById('StudentID');
-    
-    // Get the <span> element that closes the modal
-    var closeBtn= document.getElementsByClassName('closeBtn')[0];
 
-    // Listen for close click
-    closeBtn.addEventListener('click',closeModal);
+      <script>
+        $(document).ready(function(){
+          $('.collapsible').collapsible();
+        });
+      </script>
     
-    // Function to close modal
-    function closeModal(){
-      modal.style.display = "none";
-    }
+      <script>
+         $(document).ready(function(){
+         $('.modal').modal();
+         });
+      </script>
+      <script>
+      // Get the modal
+        var modal = document.getElementById('StudentID');
     
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
-</body>
-</html>
+      // Function to close modal
+        function closeModal(){
+        modal.style.display = "none"; 
+        }  
+    
+      // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          }
+         }
+      </script>
+
+  </body>
+  </html>
