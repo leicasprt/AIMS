@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="resources/materialize/css/materialize.css"  media="screen,projection"/>
+      <!-- Import styles from resource folder -->
+      <link rel="stylesheet" href="resources/styles.css" type="text/css" media="screen,projection"/>
+       <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="./js/vue.js"></script>
+      <title>AIMS</title>
+      <style>
+        header, .main, footer {
+          padding-left:300px;
+        }
+        @media only screen and (max-width: 992px){
+          header, .main, footer {
+            padding-left: 0;
+          }
+        }
+      </style>
+      <link rel="shortcut icon" href="images/neu_logo.png">
+      <!--Let browser know website is optimized for mobilSe-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <!--Side Navigation-->
+        <div class="sidenav-content-container">
+        <ul id="slide-out" class="sidenav sidenav-fixed sidenav-content-container">
+          <li><div class="user-view">
+            <div class="background"></div>
+            <div class="prof-img-container"></div>
+              <img class="prof-img" src="images/prof-icon.png"/>
+            </div>
+            <div class="profile-name">Danica Antido</a></div>
+            <li style="margin-top: 20px;"><a class="waves-effect white-text" href="#!"><i class="material-icons white-text">dashboard</i>Dashboard</a></li>
+            <li><a class="waves-effect white-text" href="#!"><i class="material-icons white-text">notifications</i>Notifications</a></li>
+              <li class="no-padding">
+                <ul class="collapsible">
+                  <li> <a class="collapsible-header waves-effect white-text active">Course<i class="course material-icons white-text">class</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li><a class="waves-effect white-text" href="student_course_crediting.html">Course Crediting</a></li>
+                        <li><a class="waves-effect white-text active" href="student_course_substitution.html">Course Substitution</a></li>
+                        <li><a class="waves-effect white-text" href="student_course_overload.html">Request for Overload</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="waves-effect white-text" href="student_program.html"><i class="material-icons white-text">description</i>Program</a>
+            </li>
+            </ul>  
+            </div>
+
+    <!--Header Content-->  
+        <div class="sidenav-content">
+          <h4 class="no-margin-bottom bold">Hi Antido!</h4>
+          <h6 class="aims-text-blue no-margin-top text-apart">COLLEGE OF COMPUTER STUDIES</h6>
+          <br/>
+          <div class="row no-margin">
+            <div class="col s2 no-padding bold">Student ID:</div>
+            <div class="col s10 no-padding">17-12345-678</div>
+          </div>
+          <div class="row no-margin">
+            <div class="col s2 no-padding bold">Program:</div>
+            <div class="col s10 no-padding">Bachelor of Science in Information Technology</div>
+          </div>
+          <div class="row no-margin">
+            <div class="col s2 no-padding bold">Year Level:</div>
+            <div class="col s10 no-padding">4th Year</div>
+          </div>
+          <div class="row no-margin">
+            <div class="col s2 no-padding bold">Academic Year:</div>
+            <div class="col s10 no-padding">1st Semester of 2019-2020</div>
+          </div>
+          <br/>
+          <hr class="light-blue"/>
+          <br/>
+
+    <!--Data Entry in Course Subsitution-->
+          <div class="aims-h1">
+            Course Substitution
+          </div>
+          <br/>
+    
+    <!--Data Entry 1-->
+        <div class="row no-margin-bottom">
+            <div class="col s5 l2 input-field">
+                <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+                <label for="Course_ID">Required Course/s</label>
+            </div>
+            <div class="col s5 l1 input-field">
+              <input type="text" id="units" class="validate" autocomplete="off">
+              <label for=units>Units</label>
+            </div>
+            <div class="col s5 l3 input-field">
+              <i class="material-icons prefix aims-btn">swap_horiz</i>
+              <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+              <label for="Course_ID">Course/s Substitute</label>
+            </div> 
+            <div class="col s5 l2 input-field">
+                <input type="text" id="Course_description" class="validate" autocomplete="off">
+                <label for="Course_description">Course Description</label>
+            </div>
+            <div class="col s5 l1 input-field">
+                <input type="text" id="Units" class="validate" autocomplete="off">
+                <label for=Units>Units</label>
+            </div> 
+            <div class="col s5 l1 input-field">
+                <input type="text" id="Grade" class="validate" autocomplete="off">
+                <label for="Grade">Grade</label>
+            </div>
+        </div> 
+
+    <!--Data Entry 2-->
+    <div id="data2" class="row no-margin-bottom">
+      <div class="col s5 l2 input-field">
+          <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+          <label for="Course_ID">Required Course/s</label>
+      </div>
+      <div class="col s5 l1 input-field">
+        <input type="text" id="units" class="validate" autocomplete="off">
+        <label for=units>Units</label>
+      </div>
+      <div class="col s5 l3 input-field">
+        <i class="material-icons prefix aims-btn">swap_horiz</i>
+        <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+        <label for="Course_ID">Course/s Substitute</label>
+      </div> 
+      <div class="col s5 l2 input-field">
+          <input type="text" id="Course_description" class="validate" autocomplete="off">
+          <label for="Course_description">Course Description</label>
+      </div>
+      <div class="col s5 l1 input-field">
+          <input type="text" id="Units" class="validate" autocomplete="off">
+          <label for=Units>Units</label>
+      </div> 
+      <div class="col s5 l1 input-field">
+          <input type="text" id="Grade" class="validate" autocomplete="off">
+          <label for="Grade">Grade</label>
+      </div>
+      <button id="exit2" onclick="ext2()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+        <i class="material-icons right">clear</i>
+     </button>
+  </div> 
+
+    <!--Data Entry 3-->
+    <div id="data3" class="row no-margin-bottom">
+      <div class="col s5 l2 input-field">
+          <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+          <label for="Course_ID">Required Course/s</label>
+      </div>
+      <div class="col s5 l1 input-field">
+        <input type="text" id="units" class="validate" autocomplete="off">
+        <label for=units>Units</label>
+      </div>
+      <div class="col s5 l3 input-field">
+        <i class="material-icons prefix aims-btn">swap_horiz</i>
+        <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+        <label for="Course_ID">Course/s Substitute</label>
+      </div> 
+      <div class="col s5 l2 input-field">
+          <input type="text" id="Course_description" class="validate" autocomplete="off">
+          <label for="Course_description">Course Description</label>
+      </div>
+      <div class="col s5 l1 input-field">
+          <input type="text" id="Units" class="validate" autocomplete="off">
+          <label for=Units>Units</label>
+      </div> 
+      <div class="col s5 l1 input-field">
+          <input type="text" id="Grade" class="validate" autocomplete="off">
+          <label for="Grade">Grade</label>
+      </div>
+      <button id="exit3" onclick="ext3()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+        <i class="material-icons right">clear</i>
+     </button>
+  </div> 
+
+  <!--Data Entry 4-->
+  <div id="data4" class="row no-margin-bottom">
+    <div class="col s5 l2 input-field">
+        <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+        <label for="Course_ID">Required Course/s</label>
+    </div>
+    <div class="col s5 l1 input-field">
+      <input type="text" id="units" class="validate" autocomplete="off">
+      <label for=units>Units</label>
+    </div>
+    <div class="col s5 l3 input-field">
+      <i class="material-icons prefix aims-btn">swap_horiz</i>
+      <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+      <label for="Course_ID">Course/s Substitute</label>
+    </div> 
+    <div class="col s5 l2 input-field">
+        <input type="text" id="Course_description" class="validate" autocomplete="off">
+        <label for="Course_description">Course Description</label>
+    </div>
+    <div class="col s5 l1 input-field">
+        <input type="text" id="Units" class="validate" autocomplete="off">
+        <label for=Units>Units</label>
+    </div> 
+    <div class="col s5 l1 input-field">
+        <input type="text" id="Grade" class="validate" autocomplete="off">
+        <label for="Grade">Grade</label>
+    </div>
+    <button id="exit4" onclick="ext4()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+      <i class="material-icons right">clear</i>
+   </button>
+</div> 
+<!--Data Entry 5-->
+<div id="data5" class="row no-margin-bottom">
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+      <label for="Course_ID">Required Course/s</label>
+  </div>
+  <div class="col s5 l1 input-field">
+    <input type="text" id="units" class="validate" autocomplete="off">
+    <label for=units>Units</label>
+  </div>
+  <div class="col s5 l3 input-field">
+    <i class="material-icons prefix aims-btn">swap_horiz</i>
+    <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+    <label for="Course_ID">Course/s Substitute</label>
+  </div> 
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_description" class="validate" autocomplete="off">
+      <label for="Course_description">Course Description</label>
+  </div>
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Units" class="validate" autocomplete="off">
+      <label for=Units>Units</label>
+  </div> 
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Grade" class="validate" autocomplete="off">
+      <label for="Grade">Grade</label>
+  </div>
+  <button id="exit5" onclick="ext5()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+    <i class="material-icons right">clear</i>
+ </button>
+</div> 
+<!--Data Entry 6-->
+<div id="data6" class="row no-margin-bottom">
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+      <label for="Course_ID">Required Course/s</label>
+  </div>
+  <div class="col s5 l1 input-field">
+    <input type="text" id="units" class="validate" autocomplete="off">
+    <label for=units>Units</label>
+  </div>
+  <div class="col s5 l3 input-field">
+    <i class="material-icons prefix aims-btn">swap_horiz</i>
+    <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+    <label for="Course_ID">Course/s Substitute</label>
+  </div> 
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_description" class="validate" autocomplete="off">
+      <label for="Course_description">Course Description</label>
+  </div>
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Units" class="validate" autocomplete="off">
+      <label for=Units>Units</label>
+  </div> 
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Grade" class="validate" autocomplete="off">
+      <label for="Grade">Grade</label>
+  </div>
+  <button id="exit6" onclick="ext6()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+    <i class="material-icons right">clear</i>
+ </button>
+</div> 
+
+<!--Data Entry 7-->
+<div id="data7" class="row no-margin-bottom">
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+      <label for="Course_ID">Required Course/s</label>
+  </div>
+  <div class="col s5 l1 input-field">
+    <input type="text" id="units" class="validate" autocomplete="off">
+    <label for=units>Units</label>
+  </div>
+  <div class="col s5 l3 input-field">
+    <i class="material-icons prefix aims-btn">swap_horiz</i>
+    <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+    <label for="Course_ID">Course/s Substitute</label>
+  </div> 
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_description" class="validate" autocomplete="off">
+      <label for="Course_description">Course Description</label>
+  </div>
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Units" class="validate" autocomplete="off">
+      <label for=Units>Units</label>
+  </div> 
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Grade" class="validate" autocomplete="off">
+      <label for="Grade">Grade</label>
+  </div>
+  <button id="exit7" onclick="ext7()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+    <i class="material-icons right">clear</i>
+ </button>
+</div> 
+
+<!--Data Entry 8-->
+<div id="data8" class="row no-margin-bottom">
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+      <label for="Course_ID">Required Course/s</label>
+  </div>
+  <div class="col s5 l1 input-field">
+    <input type="text" id="units" class="validate" autocomplete="off">
+    <label for=units>Units</label>
+  </div>
+  <div class="col s5 l3 input-field">
+    <i class="material-icons prefix aims-btn">swap_horiz</i>
+    <input type="text" id="Course_ID"class="validate" placeholder="Course ID" autocomplete="off">
+    <label for="Course_ID">Course/s Substitute</label>
+  </div> 
+  <div class="col s5 l2 input-field">
+      <input type="text" id="Course_description" class="validate" autocomplete="off">
+      <label for="Course_description">Course Description</label>
+  </div>
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Units" class="validate" autocomplete="off">
+      <label for=Units>Units</label>
+  </div> 
+  <div class="col s5 l1 input-field">
+      <input type="text" id="Grade" class="validate" autocomplete="off">
+      <label for="Grade">Grade</label>
+  </div>
+  <button id="exit8" onclick="ext8()" type="button" class="btn-floating btn-small red waves-effect waves-circle">
+    <i class="material-icons right">clear</i>
+ </button>
+</div> 
+
+   <!--Add Data Entry Button-->
+    
+    <div class="right2">
+      <button onclick="add()" type="button" class="btn-floating btn-small blue darken-4 waves-effect">
+        <i class="material-icons">add</i>
+      </button>
+    </div>
+    <br/>
+
+<!--Submit and Total Units-->
+        <div class="right3">
+          <button class="btn waves-effect waves-light blue darken-4 submit-btn" type="submit" name="action">SUBMIT
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        <br/>
+
+   
+      <!--<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+              
+
+      <!--JQuery-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!--Materialize JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+      <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+      <!--<script type="text/javascript" src="resources/materialize/js/materialize.min.js"></script>-->
+      <script>
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });
+
+          var num = 0;
+
+          var e2 = document.getElementById("exit2");
+          var e3 = document.getElementById("exit3");
+          var e4 = document.getElementById("exit4");
+          var e5 = document.getElementById("exit5");
+          var e6 = document.getElementById("exit6");
+          var e7 = document.getElementById("exit7");
+          var e8 = document.getElementById("exit8");
+
+          var dataentry2 = document.getElementById('data2');
+          var dataentry3 = document.getElementById('data3');
+          var dataentry4 = document.getElementById('data4');
+          var dataentry5 = document.getElementById('data5');
+          var dataentry6 = document.getElementById('data6');
+          var dataentry7 = document.getElementById('data7');
+          var dataentry8 = document.getElementById('data8');
+
+          dataentry2.hidden = true;
+          dataentry3.hidden = true;
+          dataentry4.hidden = true;
+          dataentry5.hidden = true;
+          dataentry6.hidden = true;
+          dataentry7.hidden = true;
+          dataentry8.hidden = true;
+
+function add(){
+
+            if (num<=7){
+              num=num+1;
+              }
+
+             if(num==1){
+              dataentry2.hidden = !dataentry2.hidden;
+            }if(num==2){
+              dataentry3.hidden = !dataentry3.hidden;
+            }if(num==3){
+              dataentry4.hidden = !dataentry4.hidden;
+            }if(num==4){
+              dataentry5.hidden = !dataentry5.hidden;
+            }if(num==5){
+              dataentry6.hidden = !dataentry6.hidden;
+            }if(num==6){
+              dataentry7.hidden = !dataentry7.hidden;
+            }if(num==7){
+              dataentry8.hidden = !dataentry8.hidden;
+            }if(num==8){
+              M.toast({html: 'Maximum entries reached!'});
+            }
+          }
+
+          function ext2(){
+            dataentry2.hidden = true; num--; 
+          }function ext3(){
+            dataentry3.hidden = true; num--; 
+          }function ext4(){
+            dataentry4.hidden = true; num--; 
+          }function ext5(){
+            dataentry5.hidden = true; num--; 
+          }function ext6(){
+            dataentry6.hidden = true; num--; 
+          }function ext7(){
+            dataentry7.hidden = true; num--; 
+          }function ext8(){
+            dataentry8.hidden = true; num-=2; 
+          }
+
+
+   
+      </script>
+
+  </body>
+  </html>

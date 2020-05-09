@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="resources/materialize/css/materialize.css"  media="screen,projection"/>
+      <!-- Import styles from resource folder -->
+      <link rel="stylesheet" href="resources/admin_styles.css" type="text/css" media="screen,projection"/>
+       <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="./js/vue.js"></script>
+      <title>AIMS</title>
+      <style>
+        header, .main, footer {
+          padding-left:300px;
+        }
+        @media only screen and (max-width: 992px){
+          header, .main, footer {
+            padding-left: 0;
+          }
+        }
+        body {
+          background-color: #3B3838;
+        }
+      </style>
+      <link rel="shortcut icon" href="images/neu_logo.png">
+      <!--Let browser know website is optimized for mobilSe-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <!--Side Navigation-->
+        <div class="sidenav-content-container">
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+          <li><div class="user-view">
+            <div class="background"></div>
+            <div class="prof-img-container"></div>
+              <img class="prof-img" src="images/prof-icon.png"/>
+            </div>
+            <div class="profile-name">College Dean</div>
+            <li style="margin-top: 20px;"><a class="waves-effect white-text" href="#!"><i class="material-icons white-text">dashboard</i>Dashboard</a></li>
+            <li><a class="waves-effect white-text" href="#!"><i class="material-icons white-text">notifications</i>Notifications</a></li>
+              <li class="no-padding">
+                <ul class="collapsible">
+                  <li> <a class="collapsible-header waves-effect white-text">Course<i class="course material-icons white-text">class</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li><a class="waves-effect white-text" href="admin_crediting.html">Course Crediting</a></li>
+                        <li><a class="waves-effect white-text active" href="admin_substitution.html">Course Substitution</a></li>
+                        <li><a class="waves-effect white-text" href="admin_overload.html">Request for Overload</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="waves-effect white-text" href="admin_program.html"><i class="material-icons white-text">description</i>Program</a>
+            </li>
+            </ul> 
+            </div> 
+
+    <!--Header Content-->  
+    <div class="admin-content">
+      <div class="header-text bold white-text no-margin-bottom">Course Substitution</div>
+        <div class="schoolyear-term">
+        <h7>1st Semester AY 2019-2020</h7>
+        </div>
+        <table class="highlight table-style">
+          <thead class="thead-style">
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Program</th>
+            <th>Yr. Level</th>
+            <th>Date Filled</th>
+            <th>Status</th>
+          </thread>
+          <tbody class=tbody-style>
+            <div class="container">
+              <tr>
+              <td><a class="yellow-gold modal-trigger" href="#StudentID">17-12345-678</a></td>
+              <div class="modal" id="StudentID">
+              <div class="modal-content">
+                
+                  <div class="modal-header"></div>
+                    <span class="closeBtn waves-effect waves-red waves-teal btn-flat">&times;</span>
+            </div>
+              </div>
+            </div>
+              <td>Antido, Danica R.</td>
+              <td>BSIT</td>
+              <td>4th Year</td>
+              <td>01/01/2020</td>
+              <td>Pending</td>
+            </tr>
+          </div>
+          </tbody>
+          </table>
+  <!--Search Button-->
+    <div class="search-containter">
+        <div class="topright">
+        <div class="row no-margin-bottom">
+          <form class="col s12">
+            <div class="row no-margin-bottom">
+              <div class="input-field col s12">
+                <i class="material-icons prefix white-text">search</i>
+                <input id="icon_prefix" type="text" class="validate" autocomplete="off">
+                <label for="icon_prefix">Search</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+
+  <!--<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+          
+
+  <!--JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Materialize JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+  <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+  <!--<script type="text/javascript" src="resources/materialize/js/materialize.min.js"></script>-->
+  <script>
+      $(document).ready(function(){
+        $('.collapsible').collapsible();
+      });
+  </script>
+  <script>
+      $(document).ready(function(){
+      $('.modal').modal();
+      });
+  </script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('StudentID');
+    
+    // Get the <span> element that closes the modal
+    var closeBtn= document.getElementsByClassName('closeBtn')[0];
+
+    // Listen for close click
+    closeBtn.addEventListener('click',closeModal);
+    
+    // Function to close modal
+    function closeModal(){
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>
